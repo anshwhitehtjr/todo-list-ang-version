@@ -6,20 +6,17 @@ import { Todo } from 'src/app/Todo';
   templateUrl: './todo-item.component.html',
   styleUrls: ['./todo-item.component.css']
 })
-export class TodoItemComponent implements OnInit
-{
+export class TodoItemComponent implements OnInit {
   @Input() todo: Todo;
   @Output() todoDelete: EventEmitter<Todo> = new EventEmitter();
 
   constructor () { }
 
-  ngOnInit(): void
-  {
+  ngOnInit(): void {
   }
 
-  onClick(todo: Todo)
-  {
-    this.todoDelete.emit(todo)
+  onClick(todo: Todo) {
+    this.todoDelete.emit(todo);
   }
 
 }
